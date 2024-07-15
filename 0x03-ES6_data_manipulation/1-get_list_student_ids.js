@@ -1,4 +1,4 @@
-onst getListStudentIds = (listStudents) => {
+const getListStudentIds = (listStudents) => {
   let listStudentIds = [];
   if (!(listStudents instanceof Array)) {
     return listStudentIds;
