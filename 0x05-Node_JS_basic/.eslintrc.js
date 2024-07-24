@@ -12,7 +12,12 @@ module.exports = {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
   },
+  parser: '@babel/eslint-parser',
   parserOptions: {
+    requireConfigFile: false,
+    babelOptions: {
+      presets: ['@babel/preset-env'],
+    },
     ecmaVersion: 2018,
     sourceType: 'module',
   },
@@ -26,10 +31,10 @@ module.exports = {
       'WithStatement',
     ],
   },
-  overrides:[
+  overrides: [
     {
       files: ['*.js'],
       excludedFiles: 'babel.config.js',
-    }
-  ]
+    },
+  ],
 };
