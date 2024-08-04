@@ -10,7 +10,6 @@ const countStudents = (dataPath) => {
     const lines = data.split('\n');
     if (lines.length <= 1) throw new Error('No data in the file');
 
-    const headers = lines[0].split(',');
     const students = lines.slice(1);
 
     const studentGroups = {};
